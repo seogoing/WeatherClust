@@ -30,7 +30,7 @@ The ERA5 daily data is needed, but ERA5 data is provided monthly or hourly data.
 
 ECMWF provides the ERA5 global reanalysis data and an example python code to download them. The reference website is as follows.
 
-[How to download ERA5](https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5)
+[https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5](https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5)
 
 (2) Change time zone (UTC→KST) and then make daily using [CDO](#requirements) command. After that, run ‘anom.ncl’ for making daily anomaly data.
 
@@ -67,7 +67,7 @@ float zg850 ( time, latitude, longitude )
 
 The SRE are identified using Automated Synoptic Observing System (ASOS) daily precipitation data provided by Korea Meteorological Administration (KMA). The ASOS data are available via Open API service:
 
-[기상청_지상(종관, ASOS) 일자료 조회서비스](https://www.data.go.kr/data/15059093/openapi.do)
+[https://www.data.go.kr/data/15059093/openapi.do](https://www.data.go.kr/data/15059093/openapi.do)
 
 See 02.Define_Sufficient_Rainfall_Event.ncl
 
