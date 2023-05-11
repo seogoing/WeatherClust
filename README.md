@@ -32,7 +32,7 @@ ECMWF provides the ERA5 global reanalysis data and an example python code to dow
 
 [https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5](https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5)
 
-(2) Change time zone (UTC→KST) and then make daily using [CDO](#requirements) command. After that, run ‘anom.ncl’ for making daily anomaly data.
+(2) Change time zone (UTC→KST) and then make daily using [CDO](#requirements) command. After that, run **‘anom.ncl’** for making daily anomaly data.
 
 ```bash
 cdo -b f32 shifttime,9hours ./DATA/ERA5_zg850_20052013_6hr_AMJJAS.nc ./DATA/ERA5_zg850_KST_20052013_6hr_AMJJAS.nc
@@ -56,9 +56,9 @@ dimensions:
 float zg850 ( time, latitude, longitude )
     long_name :    Geopotential
     standard_name :        geopotential
-		units :        m
+    units :        m
     _FillValue :   -32767
-		missing_value :        -32767
+    missing_value :        -32767
     cell_methods : time: mean
          
 ```
