@@ -4,9 +4,9 @@ WeatherClust is the program clustering synoptic pattern for heavy rainfall event
 
 ## Main process
 
-1. [Getting ERA5 dataset](https://www.notion.so/WeatherClust-22eb3cfc236e4c3c82af0d36329ed6b6) 
-2. [Define sufficient rainfall event (SRE)](https://www.notion.so/WeatherClust-22eb3cfc236e4c3c82af0d36329ed6b6)
-3. [Clustering data](https://www.notion.so/WeatherClust-22eb3cfc236e4c3c82af0d36329ed6b6)
+1. [Getting ERA5 dataset](## 1. Getting ERA5 Reanalysis dataset) 
+2. [Define sufficient rainfall event (SRE)](## 2. Define sufficient rainfall event (SRE))
+3. [Clustering data](## 3. Clustering Data)
 
 ## Requirements
 
