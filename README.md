@@ -22,11 +22,11 @@ The ERA5 daily data is needed, but ERA5 data is provided monthly or hourly data.
 
 (1) Download the ERA5 **geopotential height at 850 hPa**
 
-   Time: 2004-12-31_15:00 ~ 2013-12-31_09:00 (6 hourly data; 03,09,15,21UTC)
+- Time: 2004-12-31_15:00 ~ 2013-12-31_09:00 (6 hourly data; 03,09,15,21UTC)
 
-   Latitude: 25°N ~ 50°N 
+- Latitude: 25°N ~ 50°N 
 
-   Longitude: 115°E ~ 140°E
+- Longitude: 115°E ~ 140°E
 
 ECMWF provides the ERA5 global reanalysis data and an example python code to download them. The reference website is as follows.
 
