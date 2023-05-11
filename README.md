@@ -4,15 +4,15 @@ WeatherClust is the program clustering synoptic pattern for heavy rainfall event
 
 ## Main process
 
-1. [Getting ERA5 dataset](## 1. Getting ERA5 Reanalysis dataset) 
-2. [Define sufficient rainfall event (SRE)](## 2. Define sufficient rainfall event (SRE))
-3. [Clustering data](## 3. Clustering Data)
+1. [Getting ERA5 dataset](#1-getting-era5-reanalysis-dataset) 
+2. [Define sufficient rainfall event (SRE)](#2-define-sufficient-rainfall-event-sre)
+3. [Clustering data](#3-clustering-data)
 
 ## Requirements
 
 - Python 3
-- NCAR Command Language ([www.ncl.ucar.edu/](https://www.ncl.ucar.edu/))
-- Climate Data Operators ([code.mpimet.mpg.de/projects/cdo/](https://code.mpimet.mpg.de/projects/cdo/))
+- NCAR Command Language (NCL) ([www.ncl.ucar.edu/](https://www.ncl.ucar.edu/))
+- Climate Data Operators (CDO) ([code.mpimet.mpg.de/projects/cdo/](https://code.mpimet.mpg.de/projects/cdo/))
 
 ---
 
@@ -32,7 +32,7 @@ ECMWF provides the ERA5 global reanalysis data and an example python code to dow
 
 [How to download ERA5](https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5)
 
-(2) Change time zone (UTC→KST) and then make daily using [CDO](https://www.notion.so/WeatherClust-22eb3cfc236e4c3c82af0d36329ed6b6) command. After that, run ‘anom.ncl’ for making daily anomaly data.
+(2) Change time zone (UTC→KST) and then make daily using [CDO](#requirements) command. After that, run ‘anom.ncl’ for making daily anomaly data.
 
 ```bash
 cdo -b f32 shifttime,9hours ./DATA/ERA5_zg850_20052013_6hr_AMJJAS.nc ./DATA/ERA5_zg850_KST_20052013_6hr_AMJJAS.nc
