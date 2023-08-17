@@ -1,18 +1,18 @@
 # WeatherClust
 
-WeatherClust is the program clustering synoptic pattern for heavy rainfall events over South Korea. The representative synoptic patterns can be identified when sufficient rainfall event occur. Empirical Orthogonal Function (EOF) and K-means clustering methods are employed in this program.
+WeatherClust is the program clustering synoptic pattern for heavy rainfall events over South Korea. The representative synoptic patterns can be identified when extreme rainfall event occur. Empirical Orthogonal Function (EOF) and K-means clustering methods are employed in this program.
 
 ## Main process
 
 1. [Getting ERA5 dataset](#1-getting-era5-reanalysis-dataset) 
-2. [Define sufficient rainfall event (SRE)](#2-define-sufficient-rainfall-event-sre)
+2. [Define Extreme rainfall event (ERE)](#2-define-extreme-rainfall-event-ere)
 3. [Clustering data](#3-clustering-data)
 
 ## Requirements
 
 - Python 3
-- NCAR Command Language (NCL) ([www.ncl.ucar.edu/](https://www.ncl.ucar.edu/))
-- Climate Data Operators (CDO) ([code.mpimet.mpg.de/projects/cdo/](https://code.mpimet.mpg.de/projects/cdo/))
+- NCAR Command Language ([NCL](https://www.ncl.ucar.edu/ "www.ncl.ucar.edu" ))
+- Climate Data Operators ([CDO](https://code.mpimet.mpg.de/projects/cdo/ "code.mpimet.mpg.de/projects/cdo"))
 
 ---
 
@@ -31,6 +31,8 @@ The ERA5 daily data is needed, but ERA5 data is provided monthly or hourly data.
 ECMWF provides the ERA5 global reanalysis data and an example python code to download them. The reference website is as follows.
 
 [https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5](https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5)
+
+&nbsp;
 
 (2) Change time zone (UTC→KST) and then make daily using [CDO](#requirements) command. After that, run **‘anom.ncl’** for making daily anomaly data.
 
@@ -63,16 +65,14 @@ float zg850 ( time, latitude, longitude )
          
 ```
 
-## 2. Define sufficient rainfall event (SRE)
+## 2. Define extreme rainfall event (ERE)
 
-The SRE are identified using Automated Synoptic Observing System (ASOS) daily precipitation data provided by Korea Meteorological Administration (KMA). The ASOS data are available via Open API service:
+The ERE are identified using Automated Synoptic Observing System (ASOS) daily precipitation data provided by Korea Meteorological Administration (KMA). The ASOS data are available via [Open API service](https://www.data.go.kr/data/15059093/openapi.do "www.data.go.kr/data/15059093/openapi.do"):
 
-[https://www.data.go.kr/data/15059093/openapi.do](https://www.data.go.kr/data/15059093/openapi.do)
-
-See 02.Define_Sufficient_Rainfall_Event.ncl
+See 02.Define_Extreme_Rainfall_Event.ncl
 
 ## 3. Clustering Data
 
-SREs are partitioned based on 850 hPa geopotential height daily anomaly using K-means clustering. The number of clusters are set with reference to Sum of squred error (SSE) and  Shillouette coefficient. 
+EREs are partitioned based on 850 hPa geopotential height daily anomaly using K-means clustering. The number of clusters are set with reference to Sum of squred error (SSE) and  Shillouette coefficient. 
 
 See 03.ERA5_cluster.ipynb
