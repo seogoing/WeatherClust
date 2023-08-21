@@ -34,7 +34,7 @@ ECMWF provides the ERA5 global reanalysis data and an example python code to dow
 
 &nbsp;
 
-(2) Change time zone (UTC→KST) and then make daily using [CDO](#requirements) command. After that, run **‘anom.ncl’** for making daily anomaly data.
+(2) Change time zone (UTC→KST) and then make daily using `cdo` command. After that, run **‘anom.ncl’** for making daily anomaly data.
 
 ```bash
 cdo -b f32 shifttime,9hours ./DATA/ERA5_zg850_20052013_6hr_AMJJAS.nc ./DATA/ERA5_zg850_KST_20052013_6hr_AMJJAS.nc
