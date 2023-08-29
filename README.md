@@ -28,7 +28,7 @@ The ERA5 daily data is needed, but ERA5 data is provided monthly or hourly data.
 
 - Longitude: 115°E ~ 140°E
 
-ECMWF provides the ERA5 global reanalysis data and an example python code to download them. The reference website is as follows.
+ECMWF provides the ERA5 global reanalysis data and an example python code (01.Get_ERA5_Reanalysis_data.py) to download them. The reference website is as follows.
 
 [https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5](https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5)
 
