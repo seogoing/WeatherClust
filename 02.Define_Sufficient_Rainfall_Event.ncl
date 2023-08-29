@@ -26,7 +26,7 @@ raw_utc  	= cd_calendar(raw_time,0)
 raw_timeind = ind(raw_utc(:,0).ge.SYR .and. raw_utc(:,0).le.EYR .and. \
                   raw_utc(:,1).ge.SMON .and. raw_utc(:,1).le.EMON)
 
-DATA 		= IFILE->rn(raw_timeind,:)
+DATA 		= IFILE->rn(raw_timeind,:) ;Dimension: [time(3287), station(66)]
 
 time 		= DATA&time
 ntime 		= dimsizes(time)
